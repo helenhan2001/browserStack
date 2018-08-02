@@ -1,0 +1,948 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="browserstack-profiling-test" verbose="1" thread-count="2" parallel="tests">
+    <test name="Data Provider"   >
+        <classes>
+            <class name="com.browser.profiling.config.dataProviderCombinations"/>
+        </classes>
+    </test>
+
+    <test name="Google Pixel and Android7.1">
+        <parameter name="browser" value="android"/>
+        <parameter name="os" value="ANDROID"/>
+        <parameter name="device" value="Google Pixel"/>
+            <classes>
+            	<class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+       </test>
+       <test name="iPhone8 and IOS11">
+           <parameter name="browser" value="iPhone"/>
+           <parameter name="os" value="MAC"/>
+           <parameter name="device" value="iPhone 8"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+  		<test name="OSX Yosemite and Safari 8"   >
+            <parameter name="os" value="OS X_Yosemite"/>
+            <parameter name="browser" value="Safari_8.0"/>
+            <parameter name="device" value="macosx"/>
+                <classes>
+                    <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                </classes>
+        </test>
+        <test name="OSX Yosemite and Firefox 47.0">
+            <parameter name="os" value="OS X_Yosemite"/>
+            <parameter name="browser" value="Firefox_47.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="OSX Yosemite and Firefox 45.0">
+            <parameter name="os" value="OS X_Yosemite"/>
+            <parameter name="browser" value="Firefox_45.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="OSX Yosemite and Firefox 42.0">
+            <parameter name="os" value="OS X_Yosemite"/>
+            <parameter name="browser" value="Firefox_42.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="OSX Yosemite and Chrome 52.0">
+            <parameter name="os" value="OS X_Yosemite"/>
+            <parameter name="browser" value="Chrome_52.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="OSX Yosemite and Chrome 51.0">
+            <parameter name="os" value="OS X_Yosemite"/>
+            <parameter name="browser" value="Chrome_51.0"/>
+            <parameter name="device" value="macosx"/>
+                <classes>
+                    <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                    <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+                </classes>
+        </test>
+        <test name="OSX Yosemite and Chrome 50.0">
+            <parameter name="os" value="OS X_Yosemite"/>
+            <parameter name="browser" value="Chrome_50.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="OSX Yosemite and Chrome 45.0">
+            <parameter name="os" value="OS X_Yosemite"/>
+            <parameter name="browser" value="Chrome_45.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and IE 11"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="IE_11.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and IE 10"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="IE_10.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and IE 9"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="IE_9.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and IE 8"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="IE_8.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <!--  this is Windows 7 and Firefox 48.0 is removed becasue in browser stack this browser is not reachable
+        <test name="Windows 7 and Firefox 48.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Firefox_48.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        -->
+        <test name="Windows 7 and Firefox 47.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Firefox_47.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+       <test name="Windows 7 and Firefox 46.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Firefox_46.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and FireFox 45.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Firefox_45.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and FireFox 43.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Firefox_43.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and FireFox 40.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Firefox_40.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and FireFox 35.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Firefox_35.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and FireFox 23.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Firefox_23.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 52.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_52.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 51.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_51.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 50.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_50.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 49.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_49.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 48.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_48.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 47.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_47.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 45.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_45.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 43.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_43.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 40.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_40.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and Chrome 35.0"   >
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="Chrome_35.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+    <test name="Windows 10 and Chrome 67.0">
+        <parameter name="os" value="Windows_10"/>
+        <parameter name="browser" value="Chrome_67.0"/>
+        <parameter name="device" value="win10"/>
+        <classes>
+            <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+
+            <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+        </classes>
+    </test>
+        <test name="Windows 8.1 and IE 11.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="IE_11.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <!-- This Firefox 50 & 51 under Win 8.1 is not reachable in browserstack
+         <test name="Windows 8.1 and Firefox 51.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_50.0"/>
+            <parameter name="device" value="win8.1"/>
+              <classes>
+              	<class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+              </classes>
+        </test>
+        <test name="Windows 8.1 and Firefox 50.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_50.0"/>
+            <parameter name="device" value="win8.1"/>
+              <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+
+              </classes>
+        </test>
+         <test name="Windows 8.1 and Firefox 48.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_48.0"/>
+            <parameter name="device" value="win8.1"/>
+              <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+              </classes>
+        </test>-->
+        <test name="Windows 8.1 and Firefox 47.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_47.0"/>
+            <parameter name="device" value="win8.1"/>
+              <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+              </classes>
+        </test>
+   		<test name="Windows 8.1 and Firefox 46.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_46.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Firefox 45.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_45.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Firefox 43.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_43.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Firefox 40.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_40.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Firefox 35.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_35.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Firefox 26.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_26.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Firefox 17.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Firefox_17.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 52.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_52.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 51.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_51.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 50.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_50.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 49.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_49.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 48.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_48.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 47.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_47.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 45.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_45.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 43.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_43.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 40.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_40.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 35.0"   >
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_35.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 8.1 and Chrome 30.0">
+            <parameter name="os" value="Windows_8.1"/>
+            <parameter name="browser" value="Chrome_30.0"/>
+            <parameter name="device" value="win8.1"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Edge 13.0">
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Edge_13.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and IE 11.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="IE_11.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <!--<test name="Windows 10 and Firefox 48.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Firefox_48.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>   -->
+        <test name="Windows 10 and Firefox 47.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Firefox_47.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Firefox 46.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Firefox_46.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Firefox 45.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Firefox_45.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Firefox 42.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Firefox_42.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Firefox 40.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Firefox_40.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Firefox 37.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Firefox_37.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Firefox 32.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Firefox_32.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 52.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_52.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 51.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_51.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 50.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_50.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 49.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_49.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 48.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_48.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 47.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_47.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 45.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_45.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 43.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_43.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 40.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_40.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows 10 and Chrome 37.0"   >
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_37.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+                 <class name="com.browser.profiling.browserstack_profiling_test.HoneypotFingerprintDiffTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and IE 7.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="IE_7.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                 <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and IE 6.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="IE_6.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Firefox 47.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Firefox_47.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+         <test name="Windows XP and Firefox 46.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Firefox_46.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Firefox 45.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Firefox_45.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Firefox 43.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Firefox_43.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Firefox 40.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Firefox_40.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Firefox 35.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Firefox_35.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Chrome 49.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Chrome_49.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Chrome 48.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Chrome_48.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Chrome 47.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Chrome_47.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Chrome 45.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Chrome_45.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Chrome 43.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Chrome_43.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Chrome 40.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Chrome_40.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="Windows XP and Chrome 35.0"   >
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="Chrome_35.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+
+            </classes>
+        </test>
+        <test name="OSX El Capitan and Safari 9.1"   >
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Safari_9.1"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <!--  Firefox 48 in OSX is not reachable in browserstack
+        <test name="OSX El Capitan and Firefox 48.0">
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Firefox_48.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>  -->
+        <test name="OSX El Capitan and Firefox 47.0">
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Firefox_47.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX El Capitan and Firefox 45.0">
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Firefox_45.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX El Capitan and Firefox 42.0">
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Firefox_42.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX El Capitan and Chrome 52.0">
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Chrome_52.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX El Capitan and Chrome 51.0">
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Chrome_51.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX El Capitan and Chrome 50.0">
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Chrome_50.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX El Capitan and Chrome 45.0">
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Chrome_45.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX Mavericks and Safari 7.1"   >
+            <parameter name="os" value="OS X_Mavericks"/>
+            <parameter name="browser" value="Safari_7.1"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <!-- This Firefox 48 in OSX is not reachable in browserstack
+        <test name="OSX Mavericks and Firefox 48.0">
+            <parameter name="os" value="OS X_Mavericks"/>
+            <parameter name="browser" value="Firefox_48.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test> -->
+        <test name="OSX Mavericks and Firefox 47.0">
+            <parameter name="os" value="OS X_Mavericks"/>
+            <parameter name="browser" value="Firefox_47.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX Mavericks and Firefox 45.0">
+            <parameter name="os" value="OS X_Mavericks"/>
+            <parameter name="browser" value="Firefox_45.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX Mavericks and Firefox 42.0">
+            <parameter name="os" value="OS X_Mavericks"/>
+            <parameter name="browser" value="Firefox_42.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX Mavericks and Chrome 52.0">
+            <parameter name="os" value="OS X_Mavericks"/>
+            <parameter name="browser" value="Chrome_52.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX Mavericks and Chrome 51.0">
+            <parameter name="os" value="OS X_Mavericks"/>
+            <parameter name="browser" value="Chrome_51.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX Mavericks and Chrome 50.0">
+            <parameter name="os" value="OS X_Mavericks"/>
+            <parameter name="browser" value="Chrome_50.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+        <test name="OSX Mavericks and Chrome 45.0">
+            <parameter name="os" value="OS X_Mavericks"/>
+            <parameter name="browser" value="Chrome_45.0"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.PageFingerprintTest"/>
+            </classes>
+        </test>
+</suite>

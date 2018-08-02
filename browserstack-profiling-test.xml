@@ -1,0 +1,298 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="browserstack-profiling-test" verbose="1" thread-count="2" parallel="tests">
+    <test name="Data Provider">
+        <classes>
+            <class name="com.browser.profiling.config.dataProviderCombinations"/>
+        </classes>
+    </test>
+
+       <test name="A Learn Process">
+        <parameter name="os" value="Windows_10"/>
+        <parameter name="browser" value="Chrome_47.0"/>
+        <parameter name="device" value="win10"/>
+        <classes>
+            <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnTest"/>
+        </classes>
+        </test>
+        <test name="Windows XP and IE 6.0">
+            <parameter name="os" value="Windows_XP"/>
+            <parameter name="browser" value="IE_6.0"/>
+            <parameter name="device" value="winxp"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+            </classes>
+        </test>
+        <test name="Windows 7 and IE 8">
+            <parameter name="os" value="Windows_7"/>
+            <parameter name="browser" value="IE_8.0"/>
+            <parameter name="device" value="win7"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+            </classes>
+        </test>
+               <test name="Windows 8.1 and IE 11.0">
+                   <parameter name="os" value="Windows_8.1"/>
+                   <parameter name="browser" value="IE_11.0"/>
+                   <parameter name="device" value="win8.1"/>
+                   <classes>
+                       <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.TagJSDisabledFlashTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.PrivateBrowserTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+                       <class name="com.browser.profiling.browserstack_profiling_test.MouseKeyboardTest"/>
+
+                   </classes>
+               </test>
+
+
+                   <test name="Windows 10 and IE 11.0">
+                       <parameter name="os" value="Windows_10"/>
+                       <parameter name="browser" value="IE_11.0"/>
+                       <parameter name="device" value="win10"/>
+                       <classes>
+                           <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagJSDisabledFlashTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.PrivateBrowserTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+                       </classes>
+                   </test>
+
+                   <test name="Windows 7 and FireFox 30.0">
+                       <parameter name="os" value="Windows_7"/>
+                       <parameter name="browser" value="Firefox_30.0"/>
+                       <parameter name="device" value="win7"/>
+                       <classes>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                       </classes>
+                   </test>
+                   <test name="Windows 8.1 and FireFox 42.0">
+                       <parameter name="os" value="Windows_8.1"/>
+                       <parameter name="browser" value="Firefox_42.0"/>
+                       <parameter name="device" value="win8.1"/>
+                       <classes>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                       </classes>
+                   </test>
+                   <test name="Windows 8.1 and Firefox 58.0">
+                       <parameter name="os" value="Windows_8.1"/>
+                       <parameter name="browser" value="Firefox_58.0"/>
+                       <parameter name="device" value="win8.1"/>
+                       <classes>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                            <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.PrivateBrowserTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.AutoConfirmTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+
+                       </classes>
+                   </test>
+                   <test name="OSX El Capitan and Safari 9.1">
+                       <parameter name="os" value="OS X_El Capitan"/>
+                       <parameter name="browser" value="Safari_9.1"/>
+                       <parameter name="device" value="macosx"/>
+                       <classes>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.EncryptionTest"/>
+
+                       </classes>
+                   </test>
+                   <test name="OSX Snow Leopard and Chrome 30.0">
+                       <parameter name="os" value="OS X_Snow Leopard"/>
+                       <parameter name="browser" value="Chrome_30.0"/>
+                       <parameter name="device" value="macosx"/>
+                       <classes>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagJSDisabledFlashTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.PrivateBrowserTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                           <class name="com.browser.profiling.browserstack_profiling_test.MouseKeyboardTest"/>
+
+                       </classes>
+                   </test>
+
+        <test name="Windows 10 and Chrome 47.0">
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_47.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.PrivateBrowserTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTagJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagJSTwiceTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsNoTDIDTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTestManualSessID"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TargetedMalwareTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+            </classes>
+        </test>
+
+        <test name="Windows 10 and Chrome 63.0">
+            <parameter name="os" value="Windows_10"/>
+            <parameter name="browser" value="Chrome_63.0"/>
+            <parameter name="device" value="win10"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.ConsoleLogTest"/>
+
+                <class name="com.browser.profiling.browserstack_profiling_test.MouseKeyboardTest"/>
+
+            </classes>
+        </test>
+
+        <test name="Samsung Galaxy S8 and Android7.0">
+            <parameter name="browser" value="android"/>
+            <parameter name="os" value="ANDROID"/>
+            <parameter name="device" value="Samsung Galaxy S8"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.EncryptionTest"/>
+            </classes>
+        </test>
+
+        <test name="Google Pixel and Android7.1">
+            <parameter name="browser" value="android"/>
+            <parameter name="os" value="ANDROID"/>
+            <parameter name="device" value="Google Pixel"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.EncryptionTest"/>
+            </classes>
+        </test>
+
+
+        <test name="iPhone8 and IOS11">
+            <parameter name="browser" value="iPhone"/>
+            <parameter name="os" value="MAC"/>
+            <parameter name="device" value="iPhone 8"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagJSDisabledFlashTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+            </classes>
+        </test>
+
+        <test name="OSX El Capitan and Opera 12.15">
+            <parameter name="os" value="OS X_El Capitan"/>
+            <parameter name="browser" value="Opera_12.15"/>
+            <parameter name="device" value="mac os"/>
+            <classes>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+                <class name="com.browser.profiling.browserstack_profiling_test.EncryptionTest"/>
+            </classes>
+        </test>
+
+        <test name="macOS High Sierra and Safari 11.1">
+            <parameter name="os" value="OS X_High Sierra"/>
+            <parameter name="browser" value="Safari_11.1"/>
+            <parameter name="device" value="macosx"/>
+            <classes>
+
+                <class name="com.browser.profiling.browserstack_profiling_test.MouseKeyboardTest"/>
+
+            </classes>
+        </test>
+
+
+      <test name="Windows 10 and Chrome 66">
+        <parameter name="os" value="Windows_10"/>
+        <parameter name="browser" value="Chrome_66.0"/>
+        <parameter name="device" value="win10"/>
+        <classes>
+             <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+             <class name="com.browser.profiling.browserstack_profiling_test.MouseKeyboardTest"/>
+             <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+             <class name="com.browser.profiling.browserstack_profiling_test.PrivateBrowserTest"/>
+
+            <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+        </classes>
+      </test>
+
+
+  <test name="Windows 10 and Edge 15">
+        <parameter name="os" value="Windows_10"/>
+        <parameter name="browser" value="Edge_15"/>
+        <parameter name="device" value="win10"/>
+        <classes>
+            <class name="com.browser.profiling.browserstack_profiling_test.RISsTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.TagsJSTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.YSHD2TagsJSRedirectTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.TagJSDisabledFlashTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.WebProxyTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.TagsJsWithNoSlashFPTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.CheckJSTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.PrivateBrowserTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.TagJSiFrameTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.IntegrityLearnDiffTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.WebStrongIDTest"/>
+            <class name="com.browser.profiling.browserstack_profiling_test.MouseKeyboardTest"/>
+        </classes>
+    </test>
+
+</suite>
+
